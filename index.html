@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Experience the Magic!</title>
+    <link rel="resetsheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="assets/css/style.css">
+
+</head>
+
+<body>
+  <header>
+          <div class="container">
+              <h1>I Solemnly swear that I am up to No Good</h1>
+            <p class="lead">Check out the gify magic!</p>
+          </div>
+  </header>
+  <!-- <img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif">
+  <img src="https://media2.giphy.com/media/8rFQp4kHXJ0gU/200_s.gif" data-still="https://media2.giphy.com/media/8rFQp4kHXJ0gU/200_s.gif" data-animate="https://media2.giphy.com/media/8rFQp4kHXJ0gU/200.gif" data-state="still" class="gif">
+  <img src="https://media3.giphy.com/media/W6LbnBigDe4ZG/200_s.gif" data-still="https://media3.giphy.com/media/W6LbnBigDe4ZG/200_s.gif" data-animate="https://media3.giphy.com/media/W6LbnBigDe4ZG/200.gif" data-state="still" class="gif"> -->
+  <div id = "display-buttons">
+    <button data-person="Harry Potter">Harry Potter</button>
+    <button data-person="Hermione Granger">Hermione Granger</button>
+    <button data-person="Ronald Weasley">Ronald Weasley</button>
+    <button data-person="Albus Dumbledore">Albus Dumbledore</button>
+    <button data-person="Rubeus Hagrid">Rubeus Hagrid</button>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <form id="form">
+              <label for="user-input">Enter a Harry Potter Character and Watch the Magic!</label><br>
+              <input type="text" id="user-input">
+              <input id="submitPress" type="submit" value="Submit" class="btn btn-default">
+          </form>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-12" id="display-images"></div>
+  </div>
+
+  <div id="selectedElement">
+    <img url="assets/images/footprints.jpg" alt="footprints">
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html>

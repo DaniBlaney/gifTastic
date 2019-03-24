@@ -1,0 +1,32 @@
+@font-face{
+  font-family: HARRYP;
+  src: url("../images/fonts/HARRYP.TTF");
+}
+@font-face{
+  font-family: HARRYP;
+  src: url("../images/fonts/HARRYP.eot");
+}
+body {
+  background:url('../images/map.jpg') repeat-y 100% 100% fixed;
+
+}
+header{
+  background-color: #840a0ac4;
+}
+h1 {
+ font-family: HARRYP;
+ text-align: center;
+ font-size: 75px;
+ color: gold;
+ text-shadow: 4px 4px black;
+}
+p{
+  font-family: HARRYP;
+  text-align: center;
+  color: darkgoldenrod;
+  text-shadow: 2px 2px black;
+}
+.jumbotron{
+  background-color: darkred;
+  height: 300px;
+}
