@@ -26,6 +26,18 @@ p{
   color: darkgoldenrod;
   text-shadow: 2px 2px black;
 }
+footer {
+ position: fixed; bottom: 0;
+ width: 100%;
+ text-align: center;
+ background-color: #840a0ac4;
+
+}
+#form {
+  float:right;
+  padding: 20px;
+
+}
 .jumbotron{
   background-color: darkred;
   height: 300px;

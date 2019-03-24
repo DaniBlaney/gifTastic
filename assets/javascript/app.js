@@ -57,30 +57,14 @@ $(document).ready()
     var animateImage = $(this).attr("data-animate");
     var stillImage = $(this).attr("data-still");
 
-      if (state === "still"){
-        $(this).attr("src", animateImage);
-        $(this).attr("data-state", "animate");
-      }
-      else if(state == "animate"){
-        $(this).attr("src", stillImage);
-        $(this).attr("data-state", "still")
-      }
-
-  var maxLeft = _left_border - $('#selectedElement').width(); // counter intuitively this is actually the right border
-  var maxTop = _top_border  - $('#selectedElement').height();
-  var animationDurration = _duration;
-
-  function randomAnimation(){
-    var randomLeft = Math.floor(Math.random()*maxLeft);
-    var randomTop = Math.floor(Math.random()*maxTop);
-
-  $('#selectedElement').animate({
-     left: randomLeft,
-     top: randomTop
-   }, animationDurration, function() {
-     randomAnimation();
-   });
-}
+    if(state=="still"){
+      $(this).attr("src", animateImage)
+      $(this).attr("data-state", "still")
+    } else if(state == "animate") {
+      console.log(state)
+      $(this).attr("src", stillImage);
+      $(this).attr("data-state", "still");
+    }
   }
 
   $("#submit").on("click", function(){
