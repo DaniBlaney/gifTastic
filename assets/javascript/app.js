@@ -80,7 +80,64 @@ $(document).ready()
 
   $(document).on("click", "#input", displayImage);
   $(document).on("click", ".gif", imageState);
-  
+
+  var NavWidth = $(window).width();
+  var NavHeight = $(window).height();
+  var x = NavWidth / 2;
+  var y = NavHeight / 2;
+  var rotation = 0;
+  var crit = 0;
+  function walk() {
+    var random = Math.floor(Math.random() * 360);
+    while (rotation - 90 - random > 45 || rotation - 90 - random < -45) {
+      random = Math.floor(Math.random() * 360);
+      if (
+        x + Math.cos(random / 180 * Math.PI) * 50 < 0 ||
+        y + Math.sin(random / 180 * Math.PI) * 50 < 0 ||
+        x + Math.cos(random / 180 * Math.PI) * 50 > NavWidth ||
+        y + Math.sin(random / 180 * Math.PI) * 50 > NavHeight
+      ) {
+        random += 180;
+        break;
+      }
+      if (crit > 10) {
+        break;
+      }
+
+      crit++;
+    }
+    crit = 0;
+    x = x + Math.cos(random / 180 * Math.PI) * 50;
+    y = y + Math.sin(random / 180 * Math.PI) * 50;
+    rotation = random + 90;
+    var footprint1 = document.createElement("img");
+    footprint1.setAttribute(
+      "src",
+      "assets/images/rightfoot.png"
+    );
+    var footprint2 = document.createElement("img");
+    footprint2.setAttribute(
+      "src",
+      "assets/images/leftfoot.png"
+    );
+    footprint1.style.position = "absolute";
+    footprint1.style.left = x + "px";
+    footprint1.style.top = y + "px";
+    footprint1.className = "footprint";
+    footprint1.style.webkitTransform = "rotate(" + rotation + "deg)";
+    document.body.appendChild(footprint1);
+    footprint2.style.position = "absolute";
+    footprint2.style.left = x + "px";
+    footprint2.style.top = y + "px";
+    footprint2.className = "footprint";
+    footprint2.style.webkitTransform = "rotate(" + rotation + "deg)";
+    setTimeout(function(){
+      document.body.appendChild(footprint2);
+    }, 500)
+  }
+  setInterval(function() {
+    walk();
+  }, 1000);
 
 
 
