@@ -7,7 +7,12 @@
     <link rel="resetsheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet"  href="assets/css/style.css">
-
+    <script>
+        function play(){
+            var audio = document.getElementById("audio");
+            audio.play();
+                    }
+    </script>
 </head>
 
 <body>
@@ -15,9 +20,6 @@
     <div class="container">
         <h1>I Solemnly swear that I am up to No Good</h1>
       <p class="lead">Check out the gify magic!</p>
-    </div>
-    <div id="selectedElement">
-        <img url="assets/images/footprints.jpg" alt="footprints">
     </div>
   </header>
   <div id = "display-buttons">
@@ -28,7 +30,7 @@
     <button data-person="Rubeus Hagrid">Rubeus Hagrid</button>
   </div>
   <div class="row">
-      <div class="col-md-12">
+      <div class="col-lg-12">
           <form id="form">
               <label for="user-input">Enter a Harry Potter Character and Watch the Magic!</label><br>
               <input type="text" id="user-input">
@@ -38,14 +40,16 @@
   </div>
 
   <div class="row">
-      <div class="col-md-12" id="display-images"></div>
+      <div class="col-lg-2" id="display-images"></div>
   </div>
+  <img class= "footprints" src='assets/images/walk.gif' alt="footprints" value="PLAY"  onclick="play()">
 
   <footer>
       <p>© 2019 - Site Built By Ms. Danielle Blaney</p>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="assets/javascript/app.js"></script>
+  <audio id="audio" src="hedwigstheme.mp3" ></audio>
 </body>
 
 </html>

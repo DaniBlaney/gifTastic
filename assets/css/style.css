@@ -38,7 +38,12 @@ footer {
   padding: 20px;
 
 }
-.jumbotron{
-  background-color: darkred;
-  height: 300px;
+.row{
+  margin-bottom: 10px;
+}
+.footprints{
+  -webkit-transform: rotate(90deg);
+  width: 200px;
+  display: inline-block;
+
 }

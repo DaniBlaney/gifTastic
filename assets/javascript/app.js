@@ -80,8 +80,7 @@ $(document).ready()
 
   $(document).on("click", "#input", displayImage);
   $(document).on("click", ".gif", imageState);
-
-
+  
 
 
 
